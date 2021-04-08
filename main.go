@@ -47,7 +47,7 @@ func main() {
 	// Available events from smartbit.com.au
 	var all float64
 
-	// Holds occurrences of block intervals > 2hrs(120min) from smartbit.com.au
+	// Holds probability occurrences of block intervals > 2hrs(120min) from smartbit.com.au
 	var gtTwoHrs = make([]float64, 0)
 
 	fmt.Println("-----------------------")
@@ -74,7 +74,7 @@ func main() {
 	for i := 0; i < len(gtTwoHrs); i++ {
 		likelyHood += gtTwoHrs[i]
 	}
-	fmt.Println(likelyHood)
+	fmt.Println(likelyHood / float64(len(cleanResponse.Chart.Data)))
 	fmt.Println("-----------------------")
 	fmt.Println("How many times the above had happened so far in the history of Bitcoin?")
 	fmt.Println(len(gtTwoHrs))
