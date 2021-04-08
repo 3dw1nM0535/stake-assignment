@@ -74,7 +74,7 @@ func main() {
 	for i := 0; i < len(gtTwoHrs); i++ {
 		likelyHood += gtTwoHrs[i]
 	}
-	fmt.Println(likelyHood / float64(len(cleanResponse.Chart.Data)))
+	fmt.Println(likelyHood / float64(len(cleanResponse.Chart.Data))) // often(frequency of occurrence in the dataset)
 	fmt.Println("-----------------------")
 	fmt.Println("How many times the above had happened so far in the history of Bitcoin?")
 	fmt.Println(len(gtTwoHrs))
